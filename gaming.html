@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brawl Stars - Inscription</title>
+    <link href="gamingaddon.css" rel="stylesheet" type="text/css">
+    <script>
+        function redirectToPlayer() {
+            var playerId = document.getElementById("player-id").value;
+            if (playerId) {
+                var url = "https://brawlify.com/fr/stats/profile/" + playerId + "#gsc.tab=0";
+                window.location.href = url;
+            } else {
+                alert("Veuillez entrer un ID de joueur.");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <img src="https://logodownload.org/wp-content/uploads/2021/11/brawl-stars-logo-0.png" alt="Brawl Stars Logo" width="300px">
+        <h1>Bienvenue sur Brawl Stars</h1>
+        <p>Inscrivez-vous pour recevoir les dernières nouvelles et récompenses exclusives dans le jeu !</p>
+    </header>
+
+    <form method="post" action="gamingresult.php">
+        
+        <p class="titre">Coordonnées</p>
+        <fieldset id="coordonnees">
+            <label>Nom de joueur: </label>
+            <input type="text" name="nom_joueur" size="30" placeholder="Votre nom de joueur" /><br />
+            <label>Email: </label>
+            <input type="text" name="email" size="30" placeholder="Votre email" /><br />
+            <label>Ville: </label>
+            <input type="text" name="ville" size="30" placeholder="Votre ville" /><br />
+            <label>Pays: </label>
+            <select name="pays">
+                <option value="france">France</option>
+                <option value="belgique">Belgique</option>
+                <option value="suisse">Suisse</option>
+            </select>
+        </fieldset>
+
+        <p class="titre">Centres d'intérêts</p>
+        <fieldset id="interets">
+            <label>Brawlers préférés:</label><br />
+            <input type="checkbox" name="interets[]" value="Shelly" />Shelly
+            <input type="checkbox" name="interets[]" value="Colt" />Colt
+            <input type="checkbox" name="interets[]" value="Crow" />Crow
+            <input type="checkbox" name="interets[]" value="Dynamike" />Dynamike
+            <input type="checkbox" name="interets[]" value="Brock" />Brock
+            <input type="checkbox" name="interets[]" value="El Primo" />El Primo
+            <input type="checkbox" name="interets[]" value="Spike" />Spike
+            <input type="checkbox" name="interets[]" value="Leon" />Leon
+        </fieldset>
+
+        <p class="titre">Chercheur de joueur</p>
+        <fieldset id="chercheur">
+            <label>id du joueur:</label>
+            <input type="text" id="player-id" size="30" placeholder="enter l'id de joueur" />
+            <button type="button" onclick="redirectToPlayer()">Confirmer</button>
+        </fieldset>
+
+        <p class="titre">Laisser un message</p>
+        <fieldset id="message">
+            <textarea name="comments" rows="5" cols="40" placeholder="Laissez-nous un message..."></textarea>
+        </fieldset>
+
+        <p id="buttons">
+            <input type="submit" value="Envoyer" />
+            <input type="reset" value="Recommencer" />
+        </p>
+    </form>
+
+    <section id="brawlers">
+        <h2>Découvrez les Brawlers</h2>
+        <div class="brawlers-gallery">
+            <a href="https://brawlify.com/brawlers/detail/Shelly">
+                <img src="https://cdn.brawlify.com/brawlers/borders/16000000.png" alt="Shelly" width="150px">
+            </a>
+            <a href="https://brawlify.com/brawlers/detail/Colt">
+                <img src="https://cdn.brawlify.com/brawlers/borders/16000001.png" alt="Colt" width="150px">
+            </a>
+            <a href="https://brawlify.com/brawlers/detail/Brock">
+                <img src="https://cdn.brawlify.com/brawlers/borders/16000003.png" alt="Brock" width="150px">
+            </a>
+            <a href="https://brawlify.com/brawlers/detail/Dynamike">
+                <img src="https://cdn.brawlify.com/brawlers/borders/16000009.png" alt="Dynamike" width="150px">
+            </a>
+            <a href="https://brawlify.com/brawlers/detail/Crow">
+                <img src="https://cdn.brawlify.com/brawlers/borders/16000012.png" alt="Crow" width="150px">
+            </a>
+            <a href="https://brawlify.com/brawlers/detail/El-Primo">
+                <img src="https://cdn.brawlify.com/brawlers/borders/16000010.png" alt="El Primo" width="150px">
+            </a>
+            <a href="https://brawlify.com/brawlers/detail/Spike">
+                <img src="https://cdn.brawlify.com/brawlers/borders/16000005.png" alt="Spike" width="150px">
+            </a>
+            <a href="https://brawlify.com/brawlers/detail/Leon">
+                <img src="https://cdn.brawlify.com/brawlers/borders/16000023.png" alt="Leon" width="150px">
+            </a>
+        </div>
+    </section>
+
+</body>
+</html>
